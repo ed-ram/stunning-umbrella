@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t edramage42069l33t/stunning-umbrella -f Dockerfile.dev .
+
+script:
+  - docker run edramage42069l33t/stunning-umbrella npm run test -- --coverage 
